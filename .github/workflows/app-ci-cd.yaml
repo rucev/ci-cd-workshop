@@ -26,7 +26,12 @@ jobs:
           run: |
               npm install -g netlify-cli
               cd app
+              touch netlify.toml
+              echo '[build.environment]' > netlify.toml
+              echo '  VITE_API_URL = "https://ci-cd-workshop-agpi.onrender.com"' >> netlify.toml
+              netlify build
               netlify deploy --dir=./dist --prod
+              rm netlify.toml
 
 
            
