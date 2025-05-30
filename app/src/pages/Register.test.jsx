@@ -23,7 +23,7 @@ describe('Given a Register Page component', () => {
                 })
             );
 
-            const emailInput = screen.getByPlaceholderText(`your email`);
+            const emailInput = screen.getByPlaceholderText(`your emails`);
             const passwordInput = screen.getByPlaceholderText(`your password`);
             const confirmPasswordInput = screen.getByPlaceholderText(`confirm your password`);
             const submitButton = screen.getByText('create user');
