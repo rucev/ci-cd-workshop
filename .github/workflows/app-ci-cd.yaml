@@ -13,8 +13,17 @@ jobs:
         - uses: actions/setup-node@v4
           with:
             node-version: 20
-        - run: |
-            cd app
-            npm install
-            npm run test
-            npm run build
+        - name: build and test app
+          run: |
+              cd app
+              npm install
+              npm run test
+              npm run build
+        - name: deploy to netlify
+          run: |
+              npm install -g netlify-cli
+              cd app
+              netlify deploy --dir=./dist --prod
+
+
+           
