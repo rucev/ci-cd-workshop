@@ -1,0 +1,25 @@
+name: Api Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v4
+        - uses: actions/setup-node@v4
+          with:
+            node-version: 20
+        - name: build and test app
+          run: |
+              cd api
+              npm install
+              npm run test
+        - name: deploy to render
+          run: curl ${{secrets.RENDER_DEPLOY_HOOK}}
+
+
+           
