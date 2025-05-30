@@ -15,7 +15,7 @@ try {
 
             api.use(cors())
 
-            api.get('/api', (req, res) => { res.status(200).send('Hello World!') })
+            api.get('/api', (req, res) => { res.status(200).send('Hello World!! :D') })
 
             api.use('/users', userRouter)
 

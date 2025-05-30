@@ -8,7 +8,7 @@ const App = () => {
 
   return (
     <main className="w-full h-screen flex flex-col gap-1">
-      <h1 className="text-3xl text-center font-bold pt-10">CI / CD MERN DEMO</h1>
+      <h1 className="text-3xl text-center font-bold pt-10 text-orange-600">CI / CD MERN DEMO</h1>
       <Outlet />
     </main>
   );
