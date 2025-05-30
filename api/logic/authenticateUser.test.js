@@ -42,7 +42,7 @@ describe('authenticateUser', () => {
             await authenticateUser(email, password);
         } catch (error) {
             expect(error).to.be.instanceOf(errors.ExistenceError);
-            expect(error.message).to.equal('user not founds');
+            expect(error.message).to.equal('user not found');
         }
     });
 
